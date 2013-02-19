@@ -1,0 +1,2 @@
+get-feature-info-geowidget
+==========================
