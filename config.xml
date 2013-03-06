@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Template xmlns="http://morfeo-project.org/2007/Template">
-    <!-- Gadget Meta-Info -->
     <Catalog.ResourceDescription>
         <Vendor>CoNWeT</Vendor>
-        <Name>GetFeatureInfo</Name>
+        <Name>get-feature-info-geowidget</Name>
+        <DisplayName>Get Feature Info</DisplayName>
         <Version>0.1</Version>
         <Author>jmostazo</Author>
         <Mail>jmostazo@fi.upm.es</Mail>
@@ -12,14 +12,6 @@
         <iPhoneImageURI>img/get_feature_widget.png</iPhoneImageURI>
         <WikiURI>http://hercules.ls.fi.upm.es/public/conwet/ogf.html#getfeature-widget</WikiURI>
     </Catalog.ResourceDescription>
-
-    <!-- EzWeb Gadgets Preferences -->
-    <Platform.Preferences>
-    </Platform.Preferences>
-
-    <!-- EzWeb Gadget Persistent State -->
-    <Platform.StateProperties>
-    </Platform.StateProperties>
 
     <Platform.Wiring>
         <Slot  name="feature_info_slot"   type="text" label="Feature info"  friendcode="feature_info"/>
@@ -32,6 +24,4 @@
 
     <Platform.Rendering width="4" height="22"/>
 
-    <Platform.Context>
-    </Platform.Context> 
 </Template>
