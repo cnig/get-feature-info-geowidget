@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template xmlns="http://morfeo-project.org/2007/Template">
+    <Catalog.ResourceDescription>
+        <Vendor>CoNWeT</Vendor>
+        <Name>get-feature-info-geowidget</Name>
+        <DisplayName>Get Feature Info</DisplayName>
+        <Version>0.1</Version>
+        <Author>jmostazo</Author>
+        <Mail>jmostazo@fi.upm.es</Mail>
+        <Description>This widget performs a getFeatureInfo operation over WMS layers. GetFeatureInfo provides feature information by identifying a point on a map based on its pixel location. The GetFeatureInfo request embeds many of the parameters required in the GetMap request along with parameters specific to querying layers.</Description>
+        <ImageURI>img/get_feature_widget.png</ImageURI>
+        <iPhoneImageURI>img/get_feature_widget.png</iPhoneImageURI>
+        <WikiURI>http://hercules.ls.fi.upm.es/public/conwet/ogf.html#getfeature-widget</WikiURI>
+    </Catalog.ResourceDescription>
+
+    <Platform.Wiring>
+        <Slot  name="feature_info_slot"   type="text" label="Feature info"  friendcode="feature_info"/>
+        <Event name="link_url_event"      type="text" label="Link url"      friendcode="url"/>
+    </Platform.Wiring>
+
+    <Platform.Link>
+        <XHTML href="index.html"/>
+    </Platform.Link>
+
+    <Platform.Rendering width="4" height="22"/>
+
+</Template>
