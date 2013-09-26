@@ -57,7 +57,7 @@ conwet.Gadget = Class.create({
         }
         var linkElement = this._createLinkElement(aElement.innerHTML, aElement.href);
         aElement.parentNode.insertBefore(linkElement, aElement);
-        EzWebExt.removeFromParent(aElement);
+        aElement.parentNode.removeChild(aElement);
     },
 
     _createLinkElement: function(value, href) {
