@@ -14,8 +14,8 @@
     </Catalog.ResourceDescription>
 
     <Platform.Wiring>
-        <Slot  name="feature_info_slot"   type="text" label="Feature info"  friendcode="feature_info"/>
-        <Event name="link_url_event"      type="text" label="Link url"      friendcode="url"/>
+        <InputEndpoint  name="feature_info_slot"   type="text" label="Feature info"  friendcode="feature_info"/>
+        <OutputEndpoint name="link_url_event"      type="text" label="Link url"      friendcode="url"/>
     </Platform.Wiring>
 
     <Platform.Link>

@@ -25,32 +25,53 @@
 use("conwet");
 
 conwet.Gadget = Class.create({
-
     initialize: function() {
         // EzWeb Events
-        this.locationInfoEvent = new conwet.events.Event('location_info_event');
+        //this.locationInfoEvent = new conwet.events.Event('location_info_event');
         //this.locationEvent     = new conwet.events.Event('location_event');
-        this.linkUrlEvent      = new conwet.events.Event('link_url_event');
+        this.linkUrlEvent = new conwet.events.Event('link_url_event');
 
-        this.featureInfoSlot = new conwet.events.Slot('feature_info_slot', function(feature){
-            this.setFeature(feature.evalJSON());
+        this.featureInfoSlot = new conwet.events.Slot('feature_info_slot', function(features) {
+            this.setFeatures(features);
         }.bind(this));
     },
-
     // TODO
     /*sendLocation: function(lon, lat) {
-        this.locationEvent.send(lon + ", " + lat);
-    },*/
+     this.locationEvent.send(lon + ", " + lat);
+     },*/
 
-    setFeature: function(feature) {
-        $("info").innerHTML = feature.text;
+    setFeatures: function(featuresArray) {
+       
+        var featuresDiv = $('features');
+        
+         while (featuresDiv.firstChild) {
+            featuresDiv.removeChild(featuresDiv.firstChild);
+        }
+        
+        for (var a = 0; a < featuresArray.length; a++) {
+            var feature = featuresArray[a];
+            var featureDiv = document.createElement('div');
+            var serviceDiv = document.createElement('div');
+            var layerDiv = document.createElement('div');
+            var infoDiv = document.createElement('div');
+            serviceDiv.innerHTML = "Service: " + feature.service;
+            layerDiv.innerHTML = "Layer: " + feature.layer;
+            infoDiv.innerHTML = "Information: \n" + feature.text + "\n";
 
-        var links = $("info").getElementsByTagName("a");
-        for (var i=links.length-1; i>=0; i--) {
-            this._replaceLinkElement(links[i]);
-        };
+
+            var links = infoDiv.getElementsByTagName("a");
+
+            for (var i = links.length - 1; i >= 0; i--) {
+                this._replaceLinkElement(links[i]);
+            }
+
+            featureDiv.appendChild(serviceDiv);
+            featureDiv.appendChild(layerDiv);
+            featureDiv.appendChild(infoDiv);
+            featuresDiv.appendChild(featureDiv);
+        }
+
     },
-
     _replaceLinkElement: function(aElement) {
         if (aElement.mailto && (aElement.mailto != "")) {
             return;
@@ -59,7 +80,6 @@ conwet.Gadget = Class.create({
         aElement.parentNode.insertBefore(linkElement, aElement);
         aElement.parentNode.removeChild(aElement);
     },
-
     _createLinkElement: function(value, href) {
         var link = document.createElement("span");
         $(link).addClassName("link");
@@ -70,5 +90,4 @@ conwet.Gadget = Class.create({
         }.bind(this));
         return link;
     },
-
 });

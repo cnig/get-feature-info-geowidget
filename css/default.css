@@ -11,7 +11,7 @@ body {
     right: 0;
     background-color: #D1E0F7;
     color: #444444;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #feature {
