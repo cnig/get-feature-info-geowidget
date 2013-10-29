@@ -42,7 +42,7 @@ conwet.Gadget = Class.create({
 
     setFeatures: function(featuresArray) {
        
-        var featuresDiv = $('features');
+        var featuresDiv = $('features');        
         
          while (featuresDiv.firstChild) {
             featuresDiv.removeChild(featuresDiv.firstChild);
@@ -51,9 +51,10 @@ conwet.Gadget = Class.create({
         for (var a = 0; a < featuresArray.length; a++) {
             var feature = featuresArray[a];
             var featureDiv = document.createElement('div');
+            featureDiv.id = "info";
             var serviceDiv = document.createElement('div');
             var layerDiv = document.createElement('div');
-            var infoDiv = document.createElement('div');
+            var infoDiv = document.createElement('div');            
             serviceDiv.innerHTML = "Service: " + feature.service;
             layerDiv.innerHTML = "Layer: " + feature.layer;
             infoDiv.innerHTML = "Information: \n" + feature.text + "\n";
