@@ -4,7 +4,7 @@
         <Vendor>CoNWeT</Vendor>
         <Name>get-feature-info-geowidget</Name>
         <DisplayName>Get Feature Info</DisplayName>
-        <Version>0.2</Version>
+        <Version>0.3</Version>
         <Author>jmostazo</Author>
         <Mail>jmostazo@fi.upm.es</Mail>
         <Description>This widget performs a getFeatureInfo operation over WMS layers. GetFeatureInfo provides feature information by identifying a point on a map based on its pixel location. The GetFeatureInfo request embeds many of the parameters required in the GetMap request along with parameters specific to querying layers.</Description>
