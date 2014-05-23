@@ -9,7 +9,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #D1E0F7;
+    background-color: white;
     color: #444444;
     overflow: auto;
 }
@@ -19,7 +19,7 @@ body {
     -moz-border-radius: 3px 8px 3px 3px;
     -webkit-border-radius: 3px 8px 3px 3px;
     background-color: white;
-    border: 1px solid #809DCD;
+    border: 1px solid rgba(0,0,0,0.3);
     height: 130px;
     left: 5px;
     position: absolute;
@@ -78,7 +78,7 @@ body {
     -moz-border-radius: 3px 3px 3px 8px;
     -webkit-border-radius: 3px 3px 3px 8px;
     background-color: white;
-    border: 1px solid #809DCD;
+    border: 1px solid rgba(0,0,0,0.3);
     overflow: auto;
     padding: 8px;
     position: relative;    
